@@ -29,12 +29,14 @@ app.get('/xss', (req, res) => {
   res.sendFile(__dirname + '/xss-example.html');
 })
 
+// eslint-disable-next-line no-unused-vars
 app.use(function errorHandler(error, req, res, next) {
        let response
        if (NODE_ENV === 'production') {
          response = { error: { message: 'server error' } }
        } else {
          // Change to logger error
+         // eslint-disable-next-line no-console
          console.error(error)
          response = { message: error.message, error }
        }

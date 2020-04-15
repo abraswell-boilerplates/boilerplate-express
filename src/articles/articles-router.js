@@ -67,6 +67,7 @@ articlesRouter
       })
       .catch(next)
   })
+  // eslint-disable-next-line no-unused-vars
   .get((req, res, next) => {
     res.json(serializeArticle(res.article))
   })
@@ -75,6 +76,7 @@ articlesRouter
       req.app.get('db'),
       req.params.article_id
     )
+      // eslint-disable-next-line no-unused-vars
       .then(numRowsAffected => {
         res.status(204).end()
       })
@@ -97,6 +99,7 @@ articlesRouter
       req.params.article_id,
       articleToUpdate
     )
+      // eslint-disable-next-line no-unused-vars
       .then(numRowsAffected => {
         res.status(204).end()
       })
