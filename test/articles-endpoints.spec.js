@@ -1,10 +1,11 @@
 /* eslint-disable no-undef */
-// MAKE SURE TO CREATE TABLE WHEN YOU CREATE TEST DATABASE!!!
-// RUN psql -U db-owner -d db-name -f ./migrations/001.do.create_project_table.sql
+// MAKE SURE TO CREATE TABLE IN THE TEST DATABASE!!!
+// RUN psql -U postgres -d connectivity-test -f ./migrations/001.do.create_posts_table.sql
+// DON'T SEED THE TEST DATABASE --- ARTICLES.FIXTURES.JS WILL PROVIDE TESTING DATA
+
+// MAKE SURE TO ADD TO .env   TEST_DB_URL="postgresql://db-owner@localhost/db-name-test"
 
 // USE .only TO RUN ONE TEST SUITE AT A TIME TO START UPDATING TO PROJECT SPECIFICS
-// MAKE SURE TO UPDATE DATA TABLE OBJECT SHAPE AND SAMPLE DATA IN ARTICLES.FIXTURES.JS
-
 
 const knex = require('knex')
 const app = require('../src/app')
