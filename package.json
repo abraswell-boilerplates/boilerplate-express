@@ -35,5 +35,9 @@
     "nodemon": "^2.0.2",
     "postgrator-cli": "^3.2.0",
     "supertest": "^4.0.2"
-  }
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true
+   }
 }
